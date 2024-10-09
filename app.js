@@ -67,6 +67,12 @@ console.log("Unique Categories:", categories);
 const electronics = products.filter(product => product.category === 'Electronics');
 console.log('Electronics:', electronics);
 //Filter by Price: Filter products that cost more than $300 and store them in a new array.
-const expensive = products.filter((product)=>product.price>=300);
-console.log("Expensive Products:" ,expensive)
-
+const expensive = products.filter((product) => product.price >= 300);
+console.log("Expensive Products:", expensive)
+//4.5 or above rating
+const good = products.filter((product) => product.rating >= 4.5);
+console.log("Good Products:", good)
+//high rated names
+const goodNames = products.filter((product)=>product.rating>=4.5).forEach((product)=>console.log(product.name))
+//cheap
+const cheap = products.filter((product)=>product.price<=1000).forEach((product)=>console.log(product))
